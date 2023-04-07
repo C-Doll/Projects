@@ -1,3 +1,4 @@
+
 <style>
   body {
     background-image: url('https://imgur.com/9qvzevc.png');
@@ -9,8 +10,11 @@
     font-family: 'Garamond', serif;
 </style>
 
+# Welcome
+
 <div style="text-align:center;">
-  <h1 style="color:rgb(30, 136, 229);-webkit-text-stroke:1px black;font-weight:bold;font-size:50px;">Welcome!</h1>
+  <h1 style="color:rgb(30, 136, 229);-webkit-text-stroke:1px black;font-weight:bold;font-size:50px;">
+  </h1>
   <p style="color:rgb(30, 136, 229); -webkit-text-stroke: 1px black; font-weight:bold;font-size:50px;">This is a collection of projects by Christian Doll.</p>
 </div>
 
@@ -25,3 +29,5 @@ Here you will find a collection of projects I have worked on throughout my educa
 
 ```{tableofcontents}
 ```
+
+
