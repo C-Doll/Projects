@@ -62,6 +62,8 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'Fermi_Dirac';</script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
@@ -141,8 +143,8 @@ const thebe_selector_output = ".output, .cell_output"
       
     
     
-    <img src="_static/logo.png" class="logo__image only-light" alt="Logo image"/>
-    <script>document.write(`<img src="_static/logo.png" class="logo__image only-dark" alt="Logo image"/>`);</script>
+    <img src="_static/UCONN.png" class="logo__image only-light" alt="Logo image"/>
+    <script>document.write(`<img src="_static/UCONN.png" class="logo__image only-dark" alt="Logo image"/>`);</script>
   
   
 </a></div>
@@ -328,9 +330,7 @@ document.write(`
   </button>
 `);
 </script>
-<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <span class="fa-solid fa-list"></span>
-</label>
+
 </div></div>
       
     </div>
@@ -346,14 +346,6 @@ document.write(`
     <div id="print-main-content">
         <div id="jb-print-toc">
             
-            <div>
-                <h2> Contents </h2>
-            </div>
-            <nav aria-label="Page">
-                <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#c-doll">C. Doll</a></li>
-</ul>
-            </nav>
         </div>
     </div>
 </div>
@@ -365,21 +357,82 @@ document.write(`
                   
   <section class="tex2jax_ignore mathjax_ignore" id="electron-concentration-via-fermi-dirac-integral-order-1-2">
 <h1>Electron Concentration via Fermi-Dirac Integral order 1/2<a class="headerlink" href="#electron-concentration-via-fermi-dirac-integral-order-1-2" title="Permalink to this heading">#</a></h1>
-<section id="c-doll">
-<h2>C. Doll<a class="headerlink" href="#c-doll" title="Permalink to this heading">#</a></h2>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">### a.	The Fermi-Dirac integral describes the behavior of fermions within a system. Fermion particles are composed of a charge, mass, and spin. The spin of fermion particles induces angular momentum, which creates a small magnetic dipole.</span>
-</pre></div>
-</div>
-</div>
-</div>
+<p><font size="4"> Independenty Study Spring 2023</font></p>
+<p><font size="4"> C. Doll</font></p>
+<p>The Fermi-Dirac integral describes the behavior of fermions within a system. Fermion particles are composed of a charge, mass, and spin. The spin of fermion particles induces angular momentum, which creates a small magnetic dipole.</p>
+<center>
+<p><img alt="Not Loading Properly" src="_images/Figure1.png" /></p>
+</center>
+<center>
+Figure1 - Magnetic dipole - Definition, Formula, Units, Examples, & Facts 
+</center>
+<p>All fermions have a spin value of ½ which can be described as spin up or spin down. This non integer spin adds constraint to a system with more than one fermion because no two electrons can have the same set of quantum numbers and is also why only two electrons can occupy each energy level – one spin up, one spin down. This is known as the Pauli exclusion principle. The Fermi-Dirac distribution models the probability of electron states of certain energies and temperature.</p>
+<div class="math notranslate nohighlight" id="equation-1">
+<span class="eqno">(1)<a class="headerlink" href="#equation-1" title="Permalink to this equation">#</a></span>\[f(E)=\frac{1}{\exp\left[\frac{(E-\mu)}{(k_B T)}\right]+1}\]</div>
+<p>Where E is the state of energy, μ is the chemical potential or the Fermi energy at the highest occupied state, k_B is the Boltzmann’s constant, and T is temperature in Kelvin.</p>
+<p>A distribution can be graphed, and thermodynamic properties can be obtained as a result of the Fermi-Dirac distribution. In the case of semiconductors, a pure semiconductor at a finite temperature will always have a Fermi energy between the valence and conduction band.</p>
+<center>
+<p><img alt="Not Loading Properly" src="_images/Figure2.png" /></p>
+</center>
+<center>Figure 2 - Valence and conduction bands of insulators, metals, and semiconductors. The Fermi level is the name given to the highest energy occupied electron orbital at absolute zero.</center>
+<p>However, the Fermi energy of extrinsic semiconductors is dictated heavily by temperature and the type of added ions. An extrinsic semiconductor is when Impurities are introduced intentionally to modulate the electrical, optical, or structural properties of the semiconductor changing the location of the Fermi energy level.</p>
+<p>There are two types of extrinsic semiconductors, n-type and p-type. N-type describes a pure silicon having a group V element added or doped, such as phosphorus, so that the Fermi level moves closer to the conduction band because a greater number of electrons are now present and more readily jump the gap into the conduction band. P-type semiconductors are when group III elements, like aluminum, are added to pure silicon, reducing the number of available electrons and the Fermi level drops closer to the valence band decreasing the flow of electrons across the band gap.</p>
+<p>The band gap in semiconductors has thermally excited electrons jump from the valence band to the conduction band, creating an electron hole pair in the valence band which subsequently creates a net momentum. Photons may also jump this band if their energy level is sufficient to cover the band gap distance.</p>
+<center>
+<p><img alt="Not Loading Properly" src="_images/Figure3.png" /></p>
+</center>
+<center>
+Figure 3 – N-type semiconductor showing the change in chemical potential location as temperature increases.
+</center>
+<p>The density of state of an electron, which describes the density of electrons and the electron pair holes per unit volume, must be combined with the Fermi-Dirac distribution to acquire the distribution of elections and electron pair holes on the leading edge of the valance band or the leading edge of the conduction band. The density of state equation for the valence band is as follows.</p>
+<div class="math notranslate nohighlight" id="equation-2">
+<span class="eqno">(2)<a class="headerlink" href="#equation-2" title="Permalink to this equation">#</a></span>\[g_v(E) = \frac{M_P \sqrt{2M_P(E_v - E)}}{\pi^2 \hbar^3} dE\]</div>
+<p>Where <span class="math notranslate nohighlight">\(M_p\)</span> is the effective mass of the carriers, <span class="math notranslate nohighlight">\(E_v\)</span> is the valence band energy, <span class="math notranslate nohighlight">\(E\)</span> is the energy of the state, and <span class="math notranslate nohighlight">\(ℏ\)</span> is Planck’s reduced constant <span class="math notranslate nohighlight">\((\frac{h}{2π})\)</span>.</p>
+<p>And the equation for the density of state for the conduction band is:</p>
+<div class="math notranslate nohighlight" id="equation-3">
+<span class="eqno">(3)<a class="headerlink" href="#equation-3" title="Permalink to this equation">#</a></span>\[g_c(E) = \frac{M_n \sqrt{2M_n(E - E_c)}}{\pi^2 \hbar^3} dE\]</div>
+<p>Where <span class="math notranslate nohighlight">\(M_n\)</span> is the effective mass of carriers, <span class="math notranslate nohighlight">\(E_c\)</span> is the conduction band energy, <span class="math notranslate nohighlight">\(E\)</span> is the energy of the state, and <span class="math notranslate nohighlight">\(ℏ\)</span> is Planck’s reduced constant <span class="math notranslate nohighlight">\((\frac{h}{2π})\)</span>.</p>
+<p>When the Fermi-Dirac and DoS equations are multiple together a carrier distribution is formed. This tells us the distribution of electrons in either the conduction band or the valence band. Knowing the number of carriers can help determine the amount of current flow in the semiconductor. Carriers are defined as either an electron or an electron pair hole in a semiconductor.</p>
+<p>To compute the thermal equilibrium electron density an integration needs to occur between the edge of the conduction band to the top of the conduction band and multiplying equation (1) and equation (2) will yield:</p>
+<div class="math notranslate nohighlight" id="equation-4">
+<span class="eqno">(4)<a class="headerlink" href="#equation-4" title="Permalink to this equation">#</a></span>\[n = \frac{M_n \sqrt{2M_n}}{\pi^2 \hbar^3} \int_{E_c}^\infty \frac{\sqrt{E-E_c}}{e^{(E-E_F)}} dE\]</div>
+<p>An assumption was made here by introducing infinity to represent the top of the conduction band because the Fermi-Dirac distribution trends to zero as it approaches the top of the conduction band. This assumption allows for the normalization of the Fermi-Dirac integral with respect to the conduction band edge. By setting <span class="math notranslate nohighlight">\(ε = \frac{E - E_c}{k_B T}, \quad \eta_c = \frac{E_F - E_c}{k_B T}\)</span>, the Fermi-Dirac integral to the ½ order is created.</p>
+<div class="math notranslate nohighlight" id="equation-5">
+<span class="eqno">(5)<a class="headerlink" href="#equation-5" title="Permalink to this equation">#</a></span>\[n = 2\left(\frac{2\pi n_n k_B T}{h^2}\right)^{3/2} \left(\frac{2}{\pi}\right) \int_0^\infty \frac{\sqrt{\epsilon}}{e^{(\epsilon - \eta_C)}+1} d\epsilon\]</div>
+<p>Rewritten into a simpler form:</p>
+<div class="math notranslate nohighlight" id="equation-6">
+<span class="eqno">(6)<a class="headerlink" href="#equation-6" title="Permalink to this equation">#</a></span>\[n = N_c \left(\frac{2}{\sqrt{\pi}}\right) F_{1/2}(\eta_c)\]</div>
+<p>Where <span class="math notranslate nohighlight">\(N_C = 2\left(\frac{2\pi M_n k_B T}{h^2}\right)^{3/2}\)</span>.</p>
+<p>The modified Fermi-Dirac to the ½ order integral is expressed as such and incorporates <span class="math notranslate nohighlight">\(((\frac{h}{2π}))\)</span> into the <span class="math notranslate nohighlight">\(F_(1⁄2)\)</span> function:</p>
+<div class="math notranslate nohighlight" id="equation-7">
+<span class="eqno">(7)<a class="headerlink" href="#equation-7" title="Permalink to this equation">#</a></span>\[n = N_C F_{1/2}(\eta_c)\]</div>
+<p>The Fermi-Dirac integral to the ½ order is used to express the electron density in the conduction band. The F-D ½ is used when the Fermi energy level is less than <span class="math notranslate nohighlight">\(3k_B T\)</span> away from the conduction band and can be used to calculate the hole density, electron density, and Einstein relation. The subject of this paper will be an undergraduate approach to modeling the Fermi-Dirac integral to the ½ order.</p>
+<p>In order to express the Fermi-Dirac integral it needs to be expressed in a way that can be understood by Python. The polylogarithm expression of the complete Fermi-Dirac integral will be used and is expressed as:</p>
+<div class="math notranslate nohighlight" id="equation-8">
+<span class="eqno">(8)<a class="headerlink" href="#equation-8" title="Permalink to this equation">#</a></span>\[F_{j^{(x)}} = -L_{i_{j+1}}(-e^x)\]</div>
+<p>Where <span class="math notranslate nohighlight">\(j=\frac{1}{2}\)</span> order and is greater than -1, and <span class="math notranslate nohighlight">\(L_(i_j)\)</span> is the polylogarithm function. For <span class="math notranslate nohighlight">\(|-ⅇ^x |&lt;1\)</span> when <span class="math notranslate nohighlight">\(x≤0\)</span> a real solution will be found and when <span class="math notranslate nohighlight">\(x&gt;0\)</span> a complex solution. Adjusting the modified Fermi-Dirac integral of the ½ order to include the polylogarithm function:</p>
+<div class="math notranslate nohighlight" id="equation-9">
+<span class="eqno">(9)<a class="headerlink" href="#equation-9" title="Permalink to this equation">#</a></span>\[n = -N_C L_{i_{3/2}}(-e^{\eta_c})\]</div>
+<p>Or:</p>
+<div class="math notranslate nohighlight" id="equation-10">
+<span class="eqno">(10)<a class="headerlink" href="#equation-10" title="Permalink to this equation">#</a></span>\[n = -N_C L_{i_{3/2}}\left(-e^{\frac{E_F-E_C}{k_B T}}\right)\]</div>
+<p><font size=3>Summary</font></p>
+<p>Electron concentration can be represented by the modified fermi-Dirac integral multiplied by the effective density of states. It depends on where the fermi level is, which is indicated by <span class="math notranslate nohighlight">\(N_c = \frac{E_F - E_C}{kT}\)</span>.</p>
+<p>It was expressed in terms of a polylogarithm as seen in equation (10)
+If E_c, the conduction band, minus E_F, the Fermi level is greater than 3kT away
+E_f is the fermi level</p>
+<p><font size=3>Explination</font></p>
+<p>For line <span class="math notranslate nohighlight">\(f = \frac{1}{\exp(\frac{E_F - E_C}{kT}) + 1}\)</span>:</p>
+<p>This is not explicitly calculating the Fermi energy level but is plotting the Fermi-Dirac distribution function over a range of energy levels from  -0.25eV to 0 eV.</p>
+<p><span class="math notranslate nohighlight">\(f = \frac{1}{\exp(\frac{E_F - E_C}{kT}) + 1}\)</span> calculates the Fermi-Dirac distribution function for each energy level in <span class="math notranslate nohighlight">\(Ef_Ec\)</span>.</p>
+<p>Since <span class="math notranslate nohighlight">\(Ef_Ec\)</span> ranges from -0.25 to 0 eV, the values of <span class="math notranslate nohighlight">\(f\)</span> will range from 1 (at -0.25 eV, the lowest energy level) to 0 (at 0 eV, the highest energy level). This is the expected behavior for the Fermi-Dirac distribution function, and it is consistent with the physical interpretation of the function in terms of the occupation of energy levels by electrons in a system at finite temperature.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 <span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
 <span class="kn">import</span> <span class="nn">mpmath</span> <span class="k">as</span> <span class="nn">mp</span>
-<span class="c1">#Credit to HagesLabs</span>
+<span class="c1"># Credit to HagesLabs for providing so much information on this topic</span>
+<span class="c1"># and code base to assist me in making these charts.</span>
 
 <span class="c1">#Constants/ Variables</span>
 <span class="n">eff_mass</span> <span class="o">=</span> <span class="mi">1</span> <span class="c1">#Effective electron mass.</span>
@@ -409,39 +462,32 @@ document.write(`
 <span class="n">plt</span><span class="o">.</span><span class="n">xlim</span><span class="p">(</span><span class="o">-</span><span class="mf">0.1</span><span class="p">,</span><span class="mf">.5</span><span class="p">)</span>
 <span class="c1">#plt.ylim(1e17,1e20)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">yscale</span><span class="p">(</span><span class="s1">&#39;log&#39;</span><span class="p">)</span>   <span class="c1">#Log Scale</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Electron Density&#39;</span><span class="p">)</span>   
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Electron Density at 300K (80F)&#39;</span><span class="p">)</span>   
 <span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;$E_F\ -\ E_C\ (eV)$&#39;</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">Ef_Ec</span><span class="p">,</span> <span class="n">FDlist</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Fermi-Dirac Integral Order 1/2&#39;</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">Ef_Ec</span><span class="p">,</span> <span class="n">expBoltzmann</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Exponential Boltzmann distribution&#39;</span><span class="p">)</span>   
 <span class="c1">#3kT is an important threshold for determining if an energy level are be occupied by elections or not.</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">([</span><span class="o">-</span><span class="mi">3</span><span class="o">*</span><span class="n">kT</span><span class="p">,</span> <span class="o">-</span><span class="mi">3</span><span class="o">*</span><span class="n">kT</span><span class="p">],[</span><span class="n">np</span><span class="o">.</span><span class="n">min</span><span class="p">(</span><span class="n">FDlist</span><span class="p">),</span><span class="n">np</span><span class="o">.</span><span class="n">max</span><span class="p">(</span><span class="n">FDlist</span><span class="p">)],</span><span class="s1">&#39;--&#39;</span><span class="p">,</span><span class="n">color</span><span class="o">=</span><span class="s1">&#39;black&#39;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;-3kT&#39;</span><span class="p">)</span> 
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">([</span><span class="o">-</span><span class="mi">3</span><span class="o">*</span><span class="n">kT</span><span class="p">,</span> <span class="o">-</span><span class="mi">3</span><span class="o">*</span><span class="n">kT</span><span class="p">],[</span><span class="n">np</span><span class="o">.</span><span class="n">min</span><span class="p">(</span><span class="n">FDlist</span><span class="p">),</span><span class="n">np</span><span class="o">.</span><span class="n">max</span><span class="p">(</span><span class="n">FDlist</span><span class="p">)],</span><span class="s1">&#39;--&#39;</span><span class="p">,</span><span class="n">color</span><span class="o">=</span><span class="s1">&#39;black&#39;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;-3kT&#39;</span><span class="p">)</span> <span class="p">;</span>
 
-<span class="n">max_Y</span> <span class="o">=</span> <span class="nb">max</span><span class="p">(</span><span class="n">FDlist</span><span class="p">)</span>
-<span class="n">max_X</span> <span class="o">=</span> <span class="n">Ef_Ec</span><span class="p">[</span><span class="n">np</span><span class="o">.</span><span class="n">argmax</span><span class="p">(</span><span class="n">FDlist</span><span class="p">)]</span>
+<span class="n">max_Y</span> <span class="o">=</span> <span class="nb">max</span><span class="p">(</span><span class="n">FDlist</span><span class="p">);</span>
+<span class="n">max_X</span> <span class="o">=</span> <span class="n">Ef_Ec</span><span class="p">[</span><span class="n">np</span><span class="o">.</span><span class="n">argmax</span><span class="p">(</span><span class="n">FDlist</span><span class="p">)];</span>
 
 <span class="c1"># Add a point at the maximum Y value</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">max_X</span><span class="p">,</span> <span class="n">max_Y</span><span class="p">,</span> <span class="s1">&#39;ro&#39;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="n">max_X</span><span class="p">,</span> <span class="n">max_Y</span><span class="p">,</span> <span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">max_Y</span><span class="si">:</span><span class="s1">.2e</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">,</span> <span class="n">ha</span><span class="o">=</span><span class="s1">&#39;left&#39;</span><span class="p">,</span> <span class="n">va</span><span class="o">=</span><span class="s1">&#39;center&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">max_X</span><span class="p">,</span> <span class="n">max_Y</span><span class="p">,</span> <span class="s1">&#39;ro&#39;</span><span class="p">);</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="n">max_X</span><span class="p">,</span> <span class="n">max_Y</span><span class="p">,</span> <span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">max_Y</span><span class="si">:</span><span class="s1">.2e</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">,</span> <span class="n">ha</span><span class="o">=</span><span class="s1">&#39;left&#39;</span><span class="p">,</span> <span class="n">va</span><span class="o">=</span><span class="s1">&#39;center&#39;</span><span class="p">);</span>
 
 
-<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;$\frac</span><span class="si">{1}</span><span class="s1">{cm^</span><span class="si">{3}</span><span class="s1">}$&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;$\frac</span><span class="si">{1}</span><span class="s1">{cm^</span><span class="si">{3}</span><span class="s1">}$&#39;</span><span class="p">);</span>
 
-<span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
-<span class="c1">#Results show that the Exponential Boltzmann distribution diverges from the Fermi-Dirac integral 1/2 order at 3kT</span>
-<span class="c1">#This is because the Boltzmann distribution assumes electrions act independently of one another.</span>
-<span class="c1">#The Fermi-Dirac Integral order 1/2 includes the Pauli exclusion principal.</span>
-<span class="c1">#Which state no 2 elections can inhabit the same quantum state.</span>
-<span class="c1">#3kT is the point where</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">();</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.legend.Legend at 0x1e319d2e310&gt;
-</pre></div>
-</div>
-<img alt="_images/73564ba487dd4f12c317b239a80924f88c005a573299e45e69c1a256e438663e.png" src="_images/73564ba487dd4f12c317b239a80924f88c005a573299e45e69c1a256e438663e.png" />
+<img alt="_images/506cfa9fc837094b46781f85297c4ab99edfa095559a00b820b46aaead7672f1.png" src="_images/506cfa9fc837094b46781f85297c4ab99edfa095559a00b820b46aaead7672f1.png" />
 </div>
 </div>
+<p>Results show that the Exponential Boltzmann distribution diverges from the Fermi-Dirac integral 1/2 order at 3kT. This is because the Boltzmann distribution assumes electrions act independently of one another.The Fermi-Dirac Integral order 1/2 includes the Pauli exclusion principal. Which state no 2 elections can inhabit the same quantum state.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
@@ -460,42 +506,26 @@ document.write(`
 <span class="c1">#Define energy space - from -0.25 to 0</span>
 <span class="n">Ef_Ec</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="o">-</span><span class="mf">0.25</span><span class="p">,</span> <span class="mf">0.25</span><span class="p">,</span> <span class="mi">100</span><span class="p">)</span>  <span class="c1">#eV</span>
 
-<span class="n">f</span> <span class="o">=</span> <span class="mi">1</span><span class="o">/</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="n">Ef_Ec</span><span class="o">/</span><span class="n">kT</span><span class="p">)</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">f</span> <span class="o">=</span> <span class="mi">1</span><span class="o">/</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="n">Ef_Ec</span><span class="o">/</span><span class="n">kT</span><span class="p">)</span><span class="o">+</span><span class="mi">1</span><span class="p">);</span>
 
-<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">Ef_Ec</span><span class="p">,</span><span class="n">f</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">Ef_Ec</span><span class="p">,</span><span class="n">f</span><span class="p">);</span>
 
-<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;$E_F\ -\ E_C\ (eV)$&#39;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;Probably an electron occupies an energy state&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39; Energy Level $E_F\ -\ E_C\ (eV)$&#39;</span><span class="p">);</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;Probably an electron occupies an energy state&#39;</span><span class="p">);</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Text(0, 0.5, &#39;Probably an electron occupies an energy state&#39;)
-</pre></div>
-</div>
-<img alt="_images/1e16af7bbadfd651dbe77352bf774d1d64370dcd18369306262b4d4bfd8013df.png" src="_images/1e16af7bbadfd651dbe77352bf774d1d64370dcd18369306262b4d4bfd8013df.png" />
+<img alt="_images/a9062944e9fca0766dad2e3fe2580835f8a0f9c7f687c87b31a1b5ffb4acfce4.png" src="_images/a9062944e9fca0766dad2e3fe2580835f8a0f9c7f687c87b31a1b5ffb4acfce4.png" />
 </div>
 </div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="sd">&quot;&quot;&quot;When Ef_Ec is negative, it means that the energy level is below the conduction band edge </span>
-<span class="sd">therefore, there are no electrons in that energy state and the probably of an electron occupies that area is 100%.</span>
-
-<span class="sd">However, as the energy level approaches the conduction band edge (Ef_Ec approaches zero),</span>
-<span class="sd">the probability that an electron will occupy that energy state increases and therfore the probability of an avaiable </span>
-<span class="sd">spot for the electron to occupy that space decreases.</span>
-
-<span class="sd">At thermal equilibrium, the Fermi-Dirac distribution function describes the probability</span>
-<span class="sd">that an electron will occupy a particular energy state.&quot;&quot;&quot;</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;When Ef_Ec is negative, it means that the energy level is below the conduction band edge \ntherefore, there are no electrons in that energy state and the probably of an electron occupies that area is 100%.\n\nHowever, as the energy level approaches the conduction band edge (Ef_Ec approaches zero),\nthe probability that an electron will occupy that energy state increases and therfore the probability of an avaiable \nspot for the electron to occupy that space decreases.\n\nAt thermal equilibrium, the Fermi-Dirac distribution function describes the probability\nthat an electron will occupy a particular energy state.&#39;
-</pre></div>
-</div>
-</div>
-</div>
+<p>When <span class="math notranslate nohighlight">\(E_f-E_c\)</span> is negative, it means that the energy level is below the conduction band edge
+therefore, there are limited electrons in that energy state and the probably of an electron occupying that area approaches 100%.</p>
+<p>The reason why the probability goes from 1 to 0 as the <span class="math notranslate nohighlight">\(E_f-E_c\)</span> difference approaches zero is because electrons are
+occuping the space increasingly; and the probably of elections being able to occupy that space diminishes the closer
+you get to the conduction band</p>
+<p>At thermal equilibrium, the Fermi-Dirac distribution function describes the probability
+that an electron will occupy a particular energy state.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
@@ -530,37 +560,33 @@ document.write(`
 <span class="n">plt</span><span class="o">.</span><span class="n">xlim</span><span class="p">(</span><span class="o">-</span><span class="mf">0.3</span><span class="p">,</span><span class="mf">.5</span><span class="p">)</span>
 <span class="c1">#plt.ylim(1e17,1e20)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">yscale</span><span class="p">(</span><span class="s1">&#39;log&#39;</span><span class="p">)</span>   <span class="c1">#Log Scale</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Electron Density at 600K&#39;</span><span class="p">)</span>   
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Electron Density at 810K (1000F)&#39;</span><span class="p">)</span>   
 <span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;$E_F\ -\ E_C\ (eV)$&#39;</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">Ef_Ec</span><span class="p">,</span> <span class="n">FDlist</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Fermi-Dirac Integral Order 1/2&#39;</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">Ef_Ec</span><span class="p">,</span> <span class="n">expBoltzmann</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Exponential Boltzmann distribution&#39;</span><span class="p">)</span>   
 <span class="c1">#3kT is an important threshold for determining if an energy level are be occupied by elections or not.</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">([</span><span class="o">-</span><span class="mi">3</span><span class="o">*</span><span class="n">kT</span><span class="p">,</span> <span class="o">-</span><span class="mi">3</span><span class="o">*</span><span class="n">kT</span><span class="p">],[</span><span class="n">np</span><span class="o">.</span><span class="n">min</span><span class="p">(</span><span class="n">FDlist</span><span class="p">),</span><span class="n">np</span><span class="o">.</span><span class="n">max</span><span class="p">(</span><span class="n">FDlist</span><span class="p">)],</span><span class="s1">&#39;--&#39;</span><span class="p">,</span><span class="n">color</span><span class="o">=</span><span class="s1">&#39;black&#39;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;-3kT&#39;</span><span class="p">)</span> 
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">([</span><span class="o">-</span><span class="mi">3</span><span class="o">*</span><span class="n">kT</span><span class="p">,</span> <span class="o">-</span><span class="mi">3</span><span class="o">*</span><span class="n">kT</span><span class="p">],[</span><span class="n">np</span><span class="o">.</span><span class="n">min</span><span class="p">(</span><span class="n">FDlist</span><span class="p">),</span><span class="n">np</span><span class="o">.</span><span class="n">max</span><span class="p">(</span><span class="n">FDlist</span><span class="p">)],</span><span class="s1">&#39;--&#39;</span><span class="p">,</span><span class="n">color</span><span class="o">=</span><span class="s1">&#39;black&#39;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;-3kT&#39;</span><span class="p">)</span> <span class="p">;</span>
 
-<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;$\frac</span><span class="si">{1}</span><span class="s1">{cm^</span><span class="si">{3}</span><span class="s1">}$&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;$\frac</span><span class="si">{1}</span><span class="s1">{cm^</span><span class="si">{3}</span><span class="s1">}$&#39;</span><span class="p">);</span>
 
 
-<span class="n">max_Y</span> <span class="o">=</span> <span class="nb">max</span><span class="p">(</span><span class="n">FDlist</span><span class="p">)</span>
-<span class="n">max_X</span> <span class="o">=</span> <span class="n">Ef_Ec</span><span class="p">[</span><span class="n">np</span><span class="o">.</span><span class="n">argmax</span><span class="p">(</span><span class="n">FDlist</span><span class="p">)]</span>
+<span class="n">max_Y</span> <span class="o">=</span> <span class="nb">max</span><span class="p">(</span><span class="n">FDlist</span><span class="p">);</span>
+<span class="n">max_X</span> <span class="o">=</span> <span class="n">Ef_Ec</span><span class="p">[</span><span class="n">np</span><span class="o">.</span><span class="n">argmax</span><span class="p">(</span><span class="n">FDlist</span><span class="p">)];</span>
 
 
 <span class="c1"># Add a point at the maximum Y value</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">max_X</span><span class="p">,</span> <span class="n">max_Y</span><span class="p">,</span> <span class="s1">&#39;ro&#39;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="n">max_X</span><span class="p">,</span> <span class="n">max_Y</span><span class="p">,</span> <span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">max_Y</span><span class="si">:</span><span class="s1">.2e</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">,</span> <span class="n">ha</span><span class="o">=</span><span class="s1">&#39;left&#39;</span><span class="p">,</span> <span class="n">va</span><span class="o">=</span><span class="s1">&#39;center&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">max_X</span><span class="p">,</span> <span class="n">max_Y</span><span class="p">,</span> <span class="s1">&#39;ro&#39;</span><span class="p">);</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="n">max_X</span><span class="p">,</span> <span class="n">max_Y</span><span class="p">,</span> <span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">max_Y</span><span class="si">:</span><span class="s1">.2e</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">,</span> <span class="n">ha</span><span class="o">=</span><span class="s1">&#39;left&#39;</span><span class="p">,</span> <span class="n">va</span><span class="o">=</span><span class="s1">&#39;center&#39;</span><span class="p">);</span>
 
-
-
-<span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">();</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.legend.Legend at 0x1e31c2d6310&gt;
-</pre></div>
-</div>
-<img alt="_images/26e0e8ae7007e103c72b76124b7847522033b69a9dcdfc05c2a80be5e288cb70.png" src="_images/26e0e8ae7007e103c72b76124b7847522033b69a9dcdfc05c2a80be5e288cb70.png" />
+<img alt="_images/9873674ed4add94f34e3d66a2b6a7307aa80b2aa6f87d493c6cf7701b6a130a2.png" src="_images/9873674ed4add94f34e3d66a2b6a7307aa80b2aa6f87d493c6cf7701b6a130a2.png" />
 </div>
 </div>
+<p>The 810K graph shows more electrons per volume than the 300K graph. This is beacuase as the temperature rises the elctrons have more energy to jump to the conduction band and fill higher eneergy levels.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
@@ -595,75 +621,62 @@ document.write(`
 <span class="n">plt</span><span class="o">.</span><span class="n">xlim</span><span class="p">(</span><span class="o">-</span><span class="mf">0.05</span><span class="p">,</span><span class="mf">.5</span><span class="p">)</span>
 <span class="c1">#plt.ylim(1e17,1e20)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">yscale</span><span class="p">(</span><span class="s1">&#39;log&#39;</span><span class="p">)</span>   <span class="c1">#Log Scale</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Electron Density at 600K&#39;</span><span class="p">)</span>   
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Electron Density at 50K (-370F)&#39;</span><span class="p">)</span>   
 <span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;$E_F\ -\ E_C\ (eV)$&#39;</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">Ef_Ec</span><span class="p">,</span> <span class="n">FDlist</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Fermi-Dirac Integral Order 1/2&#39;</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">Ef_Ec</span><span class="p">,</span> <span class="n">expBoltzmann</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Exponential Boltzmann distribution&#39;</span><span class="p">)</span>   
 <span class="c1">#3kT is an important threshold for determining if an energy level are be occupied by elections or not.</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">([</span><span class="o">-</span><span class="mi">3</span><span class="o">*</span><span class="n">kT</span><span class="p">,</span> <span class="o">-</span><span class="mi">3</span><span class="o">*</span><span class="n">kT</span><span class="p">],[</span><span class="n">np</span><span class="o">.</span><span class="n">min</span><span class="p">(</span><span class="n">FDlist</span><span class="p">),</span><span class="n">np</span><span class="o">.</span><span class="n">max</span><span class="p">(</span><span class="n">FDlist</span><span class="p">)],</span><span class="s1">&#39;--&#39;</span><span class="p">,</span><span class="n">color</span><span class="o">=</span><span class="s1">&#39;black&#39;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;-3kT&#39;</span><span class="p">)</span> 
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">([</span><span class="o">-</span><span class="mi">3</span><span class="o">*</span><span class="n">kT</span><span class="p">,</span> <span class="o">-</span><span class="mi">3</span><span class="o">*</span><span class="n">kT</span><span class="p">],[</span><span class="n">np</span><span class="o">.</span><span class="n">min</span><span class="p">(</span><span class="n">FDlist</span><span class="p">),</span><span class="n">np</span><span class="o">.</span><span class="n">max</span><span class="p">(</span><span class="n">FDlist</span><span class="p">)],</span><span class="s1">&#39;--&#39;</span><span class="p">,</span><span class="n">color</span><span class="o">=</span><span class="s1">&#39;black&#39;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;-3kT&#39;</span><span class="p">)</span> <span class="p">;</span>
 
-<span class="n">max_Y</span> <span class="o">=</span> <span class="nb">max</span><span class="p">(</span><span class="n">FDlist</span><span class="p">)</span>
-<span class="n">max_X</span> <span class="o">=</span> <span class="n">Ef_Ec</span><span class="p">[</span><span class="n">np</span><span class="o">.</span><span class="n">argmax</span><span class="p">(</span><span class="n">FDlist</span><span class="p">)]</span>
+<span class="n">max_Y</span> <span class="o">=</span> <span class="nb">max</span><span class="p">(</span><span class="n">FDlist</span><span class="p">);</span>
+<span class="n">max_X</span> <span class="o">=</span> <span class="n">Ef_Ec</span><span class="p">[</span><span class="n">np</span><span class="o">.</span><span class="n">argmax</span><span class="p">(</span><span class="n">FDlist</span><span class="p">)];</span>
 
 
 <span class="c1"># Add a point at the maximum Y value</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">max_X</span><span class="p">,</span> <span class="n">max_Y</span><span class="p">,</span> <span class="s1">&#39;ro&#39;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="n">max_X</span><span class="p">,</span> <span class="n">max_Y</span><span class="p">,</span> <span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">max_Y</span><span class="si">:</span><span class="s1">.2e</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">,</span> <span class="n">ha</span><span class="o">=</span><span class="s1">&#39;left&#39;</span><span class="p">,</span> <span class="n">va</span><span class="o">=</span><span class="s1">&#39;center&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">max_X</span><span class="p">,</span> <span class="n">max_Y</span><span class="p">,</span> <span class="s1">&#39;ro&#39;</span><span class="p">);</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="n">max_X</span><span class="p">,</span> <span class="n">max_Y</span><span class="p">,</span> <span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">max_Y</span><span class="si">:</span><span class="s1">.2e</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">,</span> <span class="n">ha</span><span class="o">=</span><span class="s1">&#39;left&#39;</span><span class="p">,</span> <span class="n">va</span><span class="o">=</span><span class="s1">&#39;center&#39;</span><span class="p">);</span>
 
 
-<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;$\frac</span><span class="si">{1}</span><span class="s1">{cm^</span><span class="si">{3}</span><span class="s1">}$&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;$\frac</span><span class="si">{1}</span><span class="s1">{cm^</span><span class="si">{3}</span><span class="s1">}$&#39;</span><span class="p">);</span>
 
-<span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">();</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.legend.Legend at 0x1e31c41e310&gt;
-</pre></div>
-</div>
-<img alt="_images/80f14bacb71593124e888b7c2436c7b3361e32f405594232a2b78b46642b1e69.png" src="_images/80f14bacb71593124e888b7c2436c7b3361e32f405594232a2b78b46642b1e69.png" />
+<img alt="_images/be3ec321409212a4ff3c9c22c5ad34b4de41736d8c164a901d59585d74bbe04b.png" src="_images/be3ec321409212a4ff3c9c22c5ad34b4de41736d8c164a901d59585d74bbe04b.png" />
 </div>
 </div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="sd">&quot;&quot;&quot;The reason why the probability goes from 1 to 0 as the Ef-Ec difference approaches zero is because electrons are</span>
-<span class="sd">occuping the space increasingly; and the probably of elections being able to occupy that space diminishes the closer</span>
-<span class="sd">you get to the conduction band&quot;&quot;&quot;</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;The reason why the probability goes from 1 to 0 as the Ef-Ec difference approaches zero is because electrons are\noccuping the space increasingly; and the probably of elections being able to occupy that space diminishes the closer\nyou get to the conduction band&#39;
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="sd">&quot;&quot;&quot;Also, the reason why the fermi dirac integral begins to seperate from the Boltzmann constant, which</span>
-<span class="sd">describes the amount of electrons by unit volume in the band gap is because as you approach the conduction band, </span>
-<span class="sd">pauli&#39;s principle, which says the spin of elections are either 1/2 up or 1/2 down, will play a role in what energy level</span>
-<span class="sd">it occupies. pauli&#39;s exclusion principle does not allow for 2 electrons to occupy the same quantum state and will effect</span>
-<span class="sd">the distribution of elections within different energy levels - something the Boltzmann constant does not take into account.</span>
-
-<span class="sd">That difference can be seen within the fermi dirac 1/2 order integral and the two equations will begin to seperate at -3kT</span>
-<span class="sd">energy away from the conduction band (based on temperatre).</span>
-
-<span class="sd">If you look at the different temperatures chosen to illustrate the amount of elections occupying the band gap, specifically</span>
-<span class="sd">at temperatures of 300K, 810K, and 50K, you can see a difference in the amount of electrons occupying those states</span>
-<span class="sd">at similar eV energies.</span>
-
-<span class="sd">&quot;&quot;&quot;</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&quot;Also, the reason why the fermi dirac integral begins to seperate from the Boltzmann constant, which\ndescribes the amount of electrons by unit volume in the band gap is because as you approach the conduction band, \npauli&#39;s principle, which says the spin of elections are either 1/2 up or 1/2 down, will play a role in what energy level\nit occupies. pauli&#39;s exclusion principle does not allow for 2 electrons to occupy the same quantum state and will effect\nthe distribution of elections within different energy levels - something the Boltzmann constant does not take into account.\n\nThat difference can be seen within the fermi dirac 1/2 order integral and the two equations will begin to seperate at -3kT\nenergy away from the conduction band (based on temperatre).\n\nIf you look at the different temperatures chosen to illustrate the amount of elections occupying the band gap, specifically\nat temperatures of 300K, 810K, and 50K, you can see a difference in the amount of electrons occupying those states\nat similar eV energies.\n\n&quot;
-</pre></div>
-</div>
-</div>
-</div>
-</section>
+<p>And finally at 50K we see the lowest amount of electrons occupying the volume. As with all particles, the closer you approach absolute zero the slower particles will behave and the less energy they will exert.</p>
+<p>the reason why the fermi dirac integral begins to seperate from the Boltzmann constant, which
+describes the amount of electrons by unit volume in the band gap, is because as you approach the conduction band,
+pauli’s principle, which says the spin of elections is either 1/2 up or 1/2 down, will play a role in what energy level
+it occupies. Pauli’s exclusion principle does not allow for 2 electrons to occupy the same quantum state and will effect
+the distribution of elections within different energy levels - something the Boltzmann constant does not take into account.</p>
+<p>That difference can be seen within the fermi dirac 1/2 order integral and the two equations will begin to seperate at -3kT
+energy away from the conduction band.</p>
+<p>If you look at the different temperatures chosen to illustrate the amount of elections occupying the band gap, specifically
+at temperatures of 300K, 810K, and 50K, you can see a difference in the amount of electrons occupying those states
+at similar eV energies. Knowing the amount of electrons occupying the bang gap is instrumental in identifying temperatures that components will operate within and the electrical conductivity of the material.</p>
+<p><font size = 5> References </font></p>
+<p>[1]
+“THE HAGES LAB,” THE HAGES LAB. <a class="reference external" href="http://www.hageslab.com/">http://www.hageslab.com/</a> (accessed Apr. 14, 2023).</p>
+<p>[2]
+“22.2: The Fermi–Dirac Distribution,” Engineering LibreTexts, Feb. 04, 2021. <a class="reference external" href="https://eng.libretexts.org/Bookshelves/Materials_Science/TLP_Library_II/22%3A_Introduction_to_Semiconductors/22.2%3A_The_FermiDirac_Distribution">https://eng.libretexts.org/Bookshelves/Materials_Science/TLP_Library_II/22%3A_Introduction_to_Semiconductors/22.2%3A_The_FermiDirac_Distribution</a> (accessed Apr. 14, 2023).</p>
+<p>[3]
+“Valence band - Energy Education,” <a class="reference external" href="http://energyeducation.ca">energyeducation.ca</a>. <a class="reference external" href="https://energyeducation.ca/encyclopedia/Valence_band">https://energyeducation.ca/encyclopedia/Valence_band</a></p>
+<p>[4]
+“energy - Fermi-Dirac distribution in the high-temperature limit,” Physics Stack Exchange. <a class="reference external" href="https://physics.stackexchange.com/questions/289796/fermi-dirac-distribution-in-the-high-temperature-limit">https://physics.stackexchange.com/questions/289796/fermi-dirac-distribution-in-the-high-temperature-limit</a> (accessed Apr. 14, 2023).</p>
+<p>[5]
+“The Fermi–Dirac Distribution,” <a class="reference external" href="http://www.doitpoms.ac.uk">www.doitpoms.ac.uk</a>. <a class="reference external" href="https://www.doitpoms.ac.uk/tlplib/semiconductors/fermi.php">https://www.doitpoms.ac.uk/tlplib/semiconductors/fermi.php</a></p>
+<p>[6]
+“The Chemical Potential of an n-type Semiconductor,” <a class="reference external" href="http://www.engineeringguidance.com">www.engineeringguidance.com</a>. <a class="reference external" href="https://www.engineeringguidance.com/the-chemical-potential-of-an-n-type-semiconductor">https://www.engineeringguidance.com/the-chemical-potential-of-an-n-type-semiconductor</a> (accessed Apr. 14, 2023).</p>
+<p>[7]
+“Carriers - Carrier Distribution,” <a class="reference external" href="http://www.ece.utep.edu">www.ece.utep.edu</a>. <a class="reference external" href="http://www.ece.utep.edu/courses/ee3329/ee3329/Studyguide/ToC/Fundamentals/Carriers/distribution.html">http://www.ece.utep.edu/courses/ee3329/ee3329/Studyguide/ToC/Fundamentals/Carriers/distribution.html</a> (accessed Apr. 14, 2023).</p>
+<p>[8]
+“Density of States Derivation.” Accessed: Apr. 14, 2023. [Online]. Available: <a class="reference external" href="https://web.eecs.umich.edu/~fredty/public_html/EECS320_SP12/DOS_Derivation.pdf">https://web.eecs.umich.edu/~fredty/public_html/EECS320_SP12/DOS_Derivation.pdf</a></p>
+<p>[9]
+A. AlQurashi and C. R. Selvakumar, “A new approximation of Fermi-Dirac integrals of order 1/2 for degenerate semiconductor devices,” Superlattices and Microstructures, vol. 118, pp. 308–318, Jun. 2018, doi: <a class="reference external" href="https://doi.org/10.1016/j.spmi.2018.03.072">https://doi.org/10.1016/j.spmi.2018.03.072</a>.</p>
 </section>
 
     <script type="text/x-thebe-config">
@@ -715,20 +728,6 @@ document.write(`
             </div>
             
             
-              
-                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
-
-  <div class="sidebar-secondary-item">
-  <div class="page-toc tocsection onthispage">
-    <i class="fa-solid fa-list"></i> Contents
-  </div>
-  <nav class="bd-toc-nav page-toc">
-    <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#c-doll">C. Doll</a></li>
-</ul>
-  </nav></div>
-
-</div></div>
               
             
           </div>
